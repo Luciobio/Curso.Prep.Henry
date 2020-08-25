@@ -12,7 +12,7 @@ function crearGato(nombre, edad) {
     }
   gato['meow'] = function(){return 'Meow!';}
   return gato
-  }
+}
 
 
 function agregarPropiedad(objeto, property) {
@@ -23,6 +23,7 @@ function agregarPropiedad(objeto, property) {
   objeto[property]=null;
   return objeto
 }
+// agregarPropiedad(persona, 'altura');
 
 function invocarMetodo(objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
@@ -96,8 +97,10 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
-  usuario.password = nuevaPassword;
-  return usuario;
+  //var usuario = {password: '12345'}
+    usuario['password'] = nuevaPassword; //-> tambien sirve
+    //usuario.password = nuevaPassword;
+    return usuario;
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
